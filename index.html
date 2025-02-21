@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APKMODO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <header class="bg-blue-600 py-4 shadow-md flex items-center justify-center gap-3 px-4">
+        <h1 class="text-lg sm:text-2xl text-white font-semibold" aria-label="Nome do aplicativo">APKMODO</h1>
+    </header>
+
+
+    <div class="w-full max-w-lg px-4 mx-auto my-6">
+        <div
+            class="flex items-center bg-white border border-gray-300 rounded-full p-2 shadow-sm focus-within:ring-2 focus-within:ring-blue-500">
+            <i class="fa fa-search text-gray-500 px-3"></i>
+            <input type="text" id="searchInput" placeholder="Pesquisar aplicativos..."
+                class="w-full bg-transparent text-gray-800 px-3 py-2 focus:outline-none"
+                aria-label="Pesquisar aplicativos">
+        </div>
+    </div>
+
+    <div id="appList" class="max-w-lg w-full px-4 mx-auto space-y-3 pb-10">
+
+        <div class="app-item flex items-center p-4 bg-white rounded-xl cursor-pointer hover:bg-gray-100 transition shadow-sm"
+            data-app="Spotify" data-url="https://fir3.net/yqvG68SAI" aria-label="Spotify">
+            <img src="https://i.imgur.com/rDb2bA4.jpeg" alt="Ícone do App"
+                class="w-12 sm:w-14 h-12 sm:h-14 rounded-lg mr-3 sm:mr-4">
+            <div class="flex-1">
+                <p class="text-xs text-gray-500">Spotify AB</p>
+                <h2 class="text-sm sm:text-base font-semibold">Spotify</h2>
+                <p class="text-xs text-gray-500 desc">Versão premium desbloqueada: músicas sem anúncios, downloads
+                    ilimitados e qualidade máxima!</p>
+            </div>
+            <span class="bg-green-500 text-white px-3 py-1 rounded-md text-xs">MOD</span>
+        </div>
+
+
+        <div class="app-item flex items-center p-4 bg-white rounded-xl cursor-pointer hover:bg-gray-100 transition shadow-sm"
+            data-app="Youcine" data-url="https://4br.me/FubJWw" aria-label="Youcine">
+            <img src="https://i.imgur.com/IcbE0iC.png" alt="Ícone do App"
+                class="w-12 sm:w-14 h-12 sm:h-14 rounded-lg mr-3 sm:mr-4">
+            <div class="flex-1">
+                <p class="text-xs text-gray-500">Youcine</p>
+                <h2 class="text-sm sm:text-base font-semibold">Youcine</h2>
+                <p class="text-xs text-gray-500 desc">Sem anúncios: assista a canais esportivos e filmes sem
+                    interrupções!</p>
+            </div>
+            <span class="bg-green-500 text-white px-3 py-1 rounded-md text-xs">MOD</span>
+        </div>
+
+    </div>
+
+
+
+    <footer class="bg-gray-100 text-center text-gray-600 text-xs py-4 px-6 mt-10 border-t">
+        <p>Todos os nomes de aplicativos e marcas são propriedade de seus respectivos donos.</p>
+    </footer>
+
+
+    <div id="appModal"
+        class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden transition-opacity">
+        <div class="bg-white rounded-lg shadow-lg w-11/12 max-w-md p-6 relative">
+            <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+                aria-label="Fechar Modal">
+                <i class="fa fa-times text-lg"></i>
+            </button>
+            <div class="flex items-center mb-4">
+                <img id="modalAppIcon" src="" alt="Ícone do App" class="w-16 h-16 rounded-lg mr-4">
+                <div>
+                    <h2 id="modalAppName" class="text-lg font-semibold"></h2>
+                    <p id="modalAppDesc" class="text-sm text-gray-600"></p>
+                </div>
+            </div>
+            <a id="modalDownloadBtn" href="#" target="_blank"
+                class="w-full bg-blue-600 text-white py-2 px-4 rounded-md text-center block hover:bg-blue-700 transition"
+                rel="noopener noreferrer">
+                Download
+            </a>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
